@@ -97,21 +97,21 @@ function Layout(props: PropsData) {
   };
   const dateEnd: number = useAppSelector((state) => state.auth.dateEnd);
 
-  useEffect(() => {
-    const Timer = setInterval(() => {
-      const today = new Date();
-      const dateNow = today.setSeconds(today.getSeconds());
-      if (dateNow > dateEnd) {
-        setHanble(true);
-      } else {
-        setHanble(false);
-      }
-    }, 1000);
+  // useEffect(() => {
+  //   const Timer = setInterval(() => {
+  //     const today = new Date();
+  //     const dateNow = today.setSeconds(today.getSeconds());
+  //     if (dateNow > dateEnd) {
+  //       setHanble(true);
+  //     } else {
+  //       setHanble(false);
+  //     }
+  //   }, 1000);
 
-    return () => {
-      clearInterval(Timer);
-    };
-  });
+  //   return () => {
+  //     clearInterval(Timer);
+  //   };
+  // });
 
   return (
     <>
